@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
     pid_t cpid = fork();
     
     if (cpid == -1) {
-        std::cout << "Was not abl to create a child process" << std::endl;
+        std::cout << "Was not able to create a child process" << std::endl;
         return 1;
     } else if (cpid == 0) {
         std::cout << "[pid #" << getpid() << "]: Factorial: " << fact(number) << std::endl;
