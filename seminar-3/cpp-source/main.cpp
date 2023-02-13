@@ -64,11 +64,13 @@ int main(int argc, char *argv[]) {
         std::cout << "Was not able to create a child process" << std::endl;
         return 1;
     } else if (cpid == 0) {
+        // - Parent process
         std::cout << "[pid #" << getpid() << "]: Factorial: " << fact(number) << std::endl;
         
         // Wait child process to finish
         wait(nullptr);
     } else {
+        // - Child process
         std::cout << "[pid #" << getpid() << "]: Fibonacci: " << fib(number) << std::endl;
     }
 
